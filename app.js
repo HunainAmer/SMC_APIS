@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
-var body_parser = require('body-parser')
+var body_parser = require('body-parser');
+var port = process.env.PORT || 3000;
 
 var mint = require('./MintToken.js');
 var transfer = require('./TransferToken.js');
@@ -33,5 +34,5 @@ app.use(pause);
 
 
 
-app.listen(3000);
+app.listen(port);
 console.log('app is listining on port 3000');
